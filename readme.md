@@ -22,17 +22,21 @@ Note:
 Use NodeJS for backend and MongoDB for database operations
 Assessment to be by 20-APR-2024 05:00 PM
 
-<!-- http://localhost:8000/api/v1/get-all-order
-http://localhost:8000/api/v1/create-order -->
+-------------------------------------------------------------------------------------
+.env
 
-<!-- {
-    "deliveryMethod": "EXPRESS",
-    "channel": "WEB",
-    "shippingCharge": 50,
-    "address": {
-        "street": "1 Road",
-        "city": "Karkala",
-        "pin": "574104",
-        "address": "Karkala"
-    }
-} -->
+-------------------------------------------------------------------------------------
+PORT=8000
+API_V1='/api/v1'
+
+DB_URL='mongodb+srv://clust:clust@cluster0.brjiept.mongodb.net/mwb_assessment'
+
+JWT_SECRET='qwertyuiop'
+SENDBLUE_KEY=''
+
+MODE="localhost"
+# MODE="development"
+# MODE="staging"
+# MODE="production"
+
+

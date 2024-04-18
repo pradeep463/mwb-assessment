@@ -1,0 +1,363 @@
+{
+	"info": {
+		"_postman_id": "e1d367ce-5b28-4746-ac31-253e4d7dbb08",
+		"name": "mwb-assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17763275"
+	},
+	"item": [
+		{
+			"name": "test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Admin\",\n  \"email\": \"admin@gmail.com\",\n  \"password\": \"1234\",\n  \"phoneNumber\": \"9874563210\",\n  \"role\": \"admin\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"emailOrPhone\": \"pradeep@gmail.com\",\n  \"password\": \"1234\",\n  \"from\": \"user\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjFmZmI2NmRmMDIxZTg2Y2MzNzlhNTAiLCJuYW1lIjoiQWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTMzNzUyMTEsImV4cCI6MTcxMzk4MDAxMX0.D93IyvCM7yHWgJdvP_Tyhy0BCNHdVh1Z9ubxfc3YHBA",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Lays",
+							"type": "text"
+						},
+						{
+							"key": "categories",
+							"value": "[\"661ff800b168812f54171b12\"]",
+							"type": "text"
+						},
+						{
+							"key": "brands",
+							"value": "[\"661ff800b168812f54171b12\"]",
+							"type": "text"
+						},
+						{
+							"key": "hsn",
+							"value": "HSN",
+							"type": "text"
+						},
+						{
+							"key": "barcode",
+							"value": "BARCODE-101",
+							"type": "text"
+						},
+						{
+							"key": "tax",
+							"value": "18",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Description",
+							"type": "text"
+						},
+						{
+							"key": "cover_file",
+							"type": "file",
+							"src": "/home/pradeep/Downloads/7791_Dosa point_logo_sg_03-page-001.jpg"
+						},
+						{
+							"key": "unit",
+							"value": "pcs",
+							"type": "text"
+						},
+						{
+							"key": "sku",
+							"value": "SKU",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "min_quantity",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "max_quantity",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "discount",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "purchase_price",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "mrp",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "sale_price",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "expired",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/add-product",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"add-product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/delete-product/662006c4e596597e006ce3e3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"delete-product",
+						"662006c4e596597e006ce3e3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View-All-Products",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Add to Cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\": \"66201177b1966329d9faaf09\",\n    \"qty\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/add-to-cart",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"add-to-cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create-Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"deliveryMethod\": \"EXPRESS\",\n    \"channel\": \"WEB\",\n    \"shippingCharge\": 50,\n    \"address\": {\n        \"street\": \"1 Road\",\n        \"city\": \"Karkala\",\n        \"pin\": \"574104\",\n        \"address\": \"Karkala\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/create-order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"create-order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Orders-Admin-Customer",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjFmZmI2NmRmMDIxZTg2Y2MzNzlhNTAiLCJuYW1lIjoiQWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTMzNzUyMTEsImV4cCI6MTcxMzk4MDAxMX0.D93IyvCM7yHWgJdvP_Tyhy0BCNHdVh1Z9ubxfc3YHBA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
