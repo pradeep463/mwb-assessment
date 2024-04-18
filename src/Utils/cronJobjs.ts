@@ -4,10 +4,14 @@ import axios from "axios";
 import { SENDBLUE_KEY } from "../configs/constants";
 
 export const sendMailToAdmins = async () => {
+  const date = new Date();
+  date.setHours(0, 0, 0, 0);
+
   let pipeLine = [
     {
       $match: {
         orderStatus: "Received",
+        createdAt: { $gte: date },
       },
     },
     {
@@ -52,7 +56,7 @@ export const sendMailToAdmins = async () => {
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
-      "api-key":SENDBLUE_KEY,
+      "api-key": SENDBLUE_KEY,
     },
     data: data,
   };
